@@ -50,13 +50,16 @@ $('#index').delegate("#delete-idea", 'click', function(){
 
 function editIdeaName(){
   $('#index').delegate('#ideaname', 'keydown',function(event){
-    var nl = event.which == 13
+    var fireOnEnter = event.which == 13
 
-    if (nl) {
+    if (fireOnEnter) {
     var ideaId = this.closest('#idea')
     var data = { name: this.textContent}
 
     event.preventDefault();
+
+    this.blur()
+
     $.ajax({
       type: 'PUT',
       data: data,
@@ -69,13 +72,14 @@ function editIdeaName(){
 }
 function editIdeaBody(){
   $('#index').delegate('#ideabody', 'keydown',function(event){
-    var nl = event.which == 13
+    var fireOnEnter = event.which == 13
 
-    if (nl) {
+    if (fireOnEnter) {
     var ideaId = this.closest('#idea')
     var data = { body: this.textContent}
 
     event.preventDefault();
+    this.blur()
 
     $.ajax({
       type: 'PUT',
@@ -100,7 +104,6 @@ function likeQuality(){
 
     qualityId++
 
-    debugger;
     $.ajax({
       type: 'PUT',
       data: {quality: qualityId},
