@@ -4,4 +4,6 @@ function renderIdeas(){
   deleteIdea()
   editIdeaName()
   editIdeaBody()
+  likeQuality()
+  dislikeQuality()
 }
