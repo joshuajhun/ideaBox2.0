@@ -26,6 +26,13 @@ gem 'materialize-sass'
 group :development, :test do
   gem 'byebug'
   gem 'factory_girl_rails'
+  gem 'teaspoon'
+  gem 'teaspoon-mocha'
+  gem 'phantomjs'
+  gem 'magic_lamp'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'capybara'
 end
 
 group :development do
