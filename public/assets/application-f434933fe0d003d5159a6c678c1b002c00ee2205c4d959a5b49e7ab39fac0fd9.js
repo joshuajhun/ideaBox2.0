@@ -12411,8 +12411,8 @@ function editIdeaName(){
       data: data,
        url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(something){
-      },
-    })
+        },
+      })
     }
   })
 }
@@ -12432,8 +12432,8 @@ function editIdeaBody(){
       data: data,
        url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(){
-      },
-    })
+        },
+      })
     }
   })
 }
@@ -12473,7 +12473,6 @@ function dislikeQuality(){
 
     qualityId--
 
-
     $.ajax({
       type: 'PUT',
       data: {quality: qualityId},
@@ -12494,7 +12493,7 @@ function renderIndex(indexIdeas){
       "<ul class='collection' id='idea' data-id ='"+idea.id+"'>"
       +"<li class='collection-item' contenteditable='true' id='ideaname'>"+idea.name+"</li>"
       +"<li class='collection-item' contenteditable='true' id='ideabody'>"+truncateBody(idea.body)+"</li>"
-      +"<button class='up' id="+idea.quality+">+</button><button class='down' id="+idea.quality+">-</button><li class='collection-item quality'>"+idea.quality+"</li>"
+      +"<button class='up'>+</button><button class='down'>-</button><li class='collection-item quality'>"+idea.quality+"</li>"
       +"<button class='btn waves-effect waves-light' type='submit' name='action' id='delete-idea'>Delete</button>"
       +"</ul>"
       )
@@ -12507,7 +12506,7 @@ function renderPost(newIdea){
       "<ul class='collection' id='idea' data-id ='"+newIdea.id+"'>"
       +"<li class='collection-item' contenteditable='true' id='ideaname'>"+newIdea.name+"</li>"
       +"<li class='collection-item' contenteditable='true' id='ideabody'>"+truncateBody(newIdea.body)+"</li>"
-      +"<button class='up' id="+newIdea.quality+">+</button><button class='down' id="+newIdea.quality+">-</button><li class='collection-item quality'>"+newIdea.quality+"</li>"
+      +"<button class='up'>+</button><button class='down'>-</button><li class='collection-item quality'>"+newIdea.quality+"</li>"
       +"<button class='btn waves-effect waves-light' type='submit' name='action' id='delete-idea'>Delete</button>"
       +"</ul>"
       )
@@ -12524,7 +12523,6 @@ function truncateBody(string){
 ;
 $(document).ready(function(){
   renderIdeas()
-
 });
 function renderIdeas(){
   fetchIndex()
