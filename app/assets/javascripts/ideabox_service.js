@@ -65,8 +65,8 @@ function editIdeaName(){
       data: data,
        url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(something){
-      },
-    })
+        },
+      })
     }
   })
 }
@@ -86,8 +86,8 @@ function editIdeaBody(){
       data: data,
        url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(){
-      },
-    })
+        },
+      })
     }
   })
 }
@@ -126,7 +126,6 @@ function dislikeQuality(){
     var qualityId = ideaQuality[quality]
 
     qualityId--
-
 
     $.ajax({
       type: 'PUT',
