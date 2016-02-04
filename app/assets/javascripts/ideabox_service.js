@@ -127,7 +127,7 @@ function dislikeQuality(){
 
     qualityId--
 
-    debugger;
+
     $.ajax({
       type: 'PUT',
       data: {quality: qualityId},
