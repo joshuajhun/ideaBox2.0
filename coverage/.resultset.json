@@ -28,6 +28,7 @@
         1,
         1,
         2,
+        2,
         null,
         null
       ],
@@ -49,9 +50,11 @@
       "/Users/joshuajhun/Turing/MOD4/projects/ideaBox2.0/app/models/idea.rb": [
         1,
         1,
+        1,
+        29,
         null
       ]
     },
-    "timestamp": 1454451632
+    "timestamp": 1454611512
   }
 }
