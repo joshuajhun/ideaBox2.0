@@ -1,7 +1,7 @@
 function fetchIndex(){
   $.ajax({
     type: "GET",
-    url: "http://socalbros:3000/api/v1/ideas",
+    url: "/api/v1/ideas",
     success: function(indexIdeas){
       renderIndex(indexIdeas)
     }
@@ -14,7 +14,7 @@ function postIdea(){
     var ideaParams = { name: $('#idea-name').val(), body: $("#idea-body").val()}
     $.ajax({
       type: 'POST',
-      url: 'http://socalbros:3000/api/v1/ideas',
+      url: '/api/v1/ideas',
       data: ideaParams,
       success: function(newIdea){
         renderPost(newIdea)
@@ -37,7 +37,7 @@ $('#index').delegate("#delete-idea", 'click', function(){
   var idea = this.closest('#idea')
     $.ajax({
       type: 'DELETE',
-       url: 'http://socalbros:3000/api/v1/ideas/'+ $(idea).attr('data-id'),
+       url: '/api/v1/ideas/'+ $(idea).attr('data-id'),
       success: function(){
         $(idea).remove();
       },
@@ -63,7 +63,7 @@ function editIdeaName(){
     $.ajax({
       type: 'PUT',
       data: data,
-       url: 'http://socalbros:3000/api/v1/ideas/'+ $(ideaId).attr('data-id'),
+       url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(something){
       },
     })
@@ -84,7 +84,7 @@ function editIdeaBody(){
     $.ajax({
       type: 'PUT',
       data: data,
-       url: 'http://socalbros:3000/api/v1/ideas/'+ $(ideaId).attr('data-id'),
+       url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(){
       },
     })
@@ -107,7 +107,7 @@ function likeQuality(){
     $.ajax({
       type: 'PUT',
       data: {quality: qualityId},
-      url: 'http://socalbros:3000/api/v1/ideas/'+ $(ideaId).attr('data-id'),
+      url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(){
           $(changeQuality).text(qualityTexts[qualityId])
       },
@@ -131,7 +131,7 @@ function dislikeQuality(){
     $.ajax({
       type: 'PUT',
       data: {quality: qualityId},
-      url: 'http://socalbros:3000/api/v1/ideas/'+ $(ideaId).attr('data-id'),
+      url: '/api/v1/ideas/'+ $(ideaId).attr('data-id'),
       success: function(){
           $(changeQuality).text(qualityTexts[qualityId])
       },
