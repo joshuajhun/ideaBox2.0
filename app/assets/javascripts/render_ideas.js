@@ -6,4 +6,5 @@ function renderIdeas(){
   editIdeaBody()
   likeQuality()
   dislikeQuality()
+  searchIdeas()
 }
