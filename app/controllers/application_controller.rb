@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
 
   def allow_ajax_request
     headers['Access-Control-Allow-Origin'] = '*'
-    headers['Access-Control-Allow-Request-Method'] = '*'
+    headers['Access-Control-Allow-Request-Method'] = %w{GET POST OPTIONS}.join(',')
     headers['Access-Control-Allow-Headers'] = '*'
   end
 end
