@@ -103,6 +103,7 @@ function likeQuality(){
     var qualityId = ideaQuality[quality]
 
     qualityId++
+    console.log(ideaQuality[quality])
 
     $.ajax({
       type: 'PUT',
