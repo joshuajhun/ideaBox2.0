@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def allow_ajax_request
-    headers['Access-Control-Allow-Origins'] = '*'
+    headers['Access-Control-Allow-Origin'] = '*'
     headers['Access-Control-Allow-Request-Method'] = '*'
     headers['Access-Control-Allow-Headers'] = '*'
   end
